@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 
 import logo from "../assets/logo.png";
-import heroBTN from "../assets/heroBTN.png";
 
 const NAV_LINKS = ["Home", "Our Practice", "Dental Emergency", "Emergency", "FAQ"];
 
@@ -10,8 +9,6 @@ function Navbar() {
   const logoRef = useRef(null); 
   const linksRef = useRef([]);
   const btnRef = useRef(null);
-  const arrowLeftRef = useRef(null);
-  const arrowRightRef = useRef(null);
 
   useEffect(() => {
     const gsap = window.gsap;
@@ -23,8 +20,6 @@ function Navbar() {
         logoRef.current,
         ...linksRef.current,
         btnRef.current,
-        arrowLeftRef.current,
-        arrowRightRef.current,
       ],
       { autoAlpha: 0 }
     );
@@ -74,7 +69,7 @@ function Navbar() {
                 className="relative font-primary hover:text-[#4ca3d8] transition-colors duration-200
                            after:absolute after:left-0 after:-bottom-0.5 after:h-[1.5px]
                            after:w-0 after:bg-[#4ca3d8] after:transition-all after:duration-300
-                           hover:after:w-full"
+                           hover:after:w-full hover:font-semibold"
                 style={{ opacity: 0 }}
               >
                 {item}
@@ -85,7 +80,7 @@ function Navbar() {
 
         <div ref={btnRef} style={{ opacity: 0 }}>
           <button  className="border-surface/20  md:text-base font-medium text-sm border rounded-full py-2 px-6 bg-gradient-to-r from-[#93CDF5] via-[#e9f6ffc5] to-[#93CDF5] cursor-pointer transition-transform duration-200
-                       hover:scale-[1.02] outline-none active:scale-[0.99] drop-shadow-sm">Book Appointment</button>
+                      outline-none active:scale-[0.95] shadow-md shadow-white/20">Book Appointment</button>
         </div>
       </nav>
     </>

@@ -23,7 +23,6 @@ function HeroContent() {
         descRef.current,
         circleRef.current,
         teethRef.current,
-        teethArrowRef.current,
       ],
       { autoAlpha: 0 }
     );
@@ -77,20 +76,20 @@ function HeroContent() {
   }, []);
 
   return (
-    <div className="relative overflow-hidden font-primary z-10 flex flex-col items-center text-center pt-8 pb-0 px-4">
+    <div className="relative font-primary z-10 flex flex-col items-center text-center pt-8 pb-0 px-4">
 
       <h1
         ref={headingRef}
         className="text-4xl md:text-5xl lg:text-6xl font-medium text-[#1e2a3a] leading-tight"
       >
-        Achieve A Brighter,
+        Achieve A <span className="font-semibold">Brighter,</span>
       </h1>
 
       <h2
         ref={subheadingRef}
         className="text-4xl md:text-5xl lg:text-6xl font-medium italic text-[#4ca3d8] leading-tight md:mt-2"
       >
-        Healthier Smile!
+        Healthier <span className="font-semibold">Smile!</span>
       </h2>
 
       <p
@@ -104,18 +103,16 @@ function HeroContent() {
       </p>
 
 
-      <div className="relative flex items-end justify-center w-full max-w-xl mx-auto">
-
         <img
           ref={circleRef}
           src={heroCircle}
           alt=""
           aria-hidden="true"
-          className="absolute bottom-[-200px] left-1/2 -translate-x-1/2 w-96 pointer-events-none select-none"
+          className="absolute bottom-[-400px] xl:-bottom-[300px] left-1/2 -translate-x-1/2 w-96 pointer-events-none select-none"
           style={{ opacity: 0 }}
           draggable="false"
         />
-
+      <div className="relative flex items-center justify-center w-full max-w-7xl mx-auto">
         <img
           ref={teethArrowRef}
           src={heroTeethArrow}
@@ -125,12 +122,11 @@ function HeroContent() {
           style={{ opacity: 0 }}
           draggable="false"
         />
-
         <img
           ref={teethRef}
           src={heroTeeth}
           alt="Healthy tooth illustration"
-          className="relative z-10 w-60 md:w-72 pointer-events-none select-none drop-shadow-xl"
+          className="z-10 w-60 md:w-72 pointer-events-none select-none drop-shadow-xl"
           style={{ opacity: 0 }}
           draggable="false"
         />
