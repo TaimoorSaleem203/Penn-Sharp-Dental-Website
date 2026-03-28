@@ -13,7 +13,7 @@ export default {
         surface: "#FAFEFE",
       },
       fontFamily: {
-        primary: ["Raleway", "sans-serif"],
+        primary: ["Lato", "sans-serif"],
       },
 
       fontSize: {

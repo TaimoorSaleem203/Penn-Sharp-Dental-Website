@@ -52,7 +52,7 @@ function Navbar() {
     <>
       <nav
         ref={navRef}
-        className="relative z-20 flex items-center justify-between px-6 md:px-12"
+        className="font-primary relative z-20 flex items-center justify-between px-6 md:px-12"
       >
 
         <a ref={logoRef} href="/" className="flex items-center gap-2 shrink-0" style={{ opacity: 0 }}>
@@ -66,7 +66,7 @@ function Navbar() {
               <a
                 ref={(el) => (linksRef.current[i] = el)}
                 href="#"
-                className="relative font-primary hover:text-[#4ca3d8] transition-colors duration-200
+                className="relative hover:text-[#4ca3d8] transition-colors duration-200
                            after:absolute after:left-0 after:-bottom-0.5 after:h-[1.5px]
                            after:w-0 after:bg-[#4ca3d8] after:transition-all after:duration-300
                            hover:after:w-full hover:font-semibold"
